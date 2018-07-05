@@ -1,0 +1,889 @@
+Top highlight
+Homepage <https://medium.com/>
+freeCodeCamp
+<https://medium.freecodecamp.org/?source=logo-bf739750abf6---336d898217ee>
+Following<https://twitter.com/freecodecamp><https://facebook.com/freecodecamp>
+<https://medium.freecodecamp.org/search>
+Zhou En
+
+  * Home <https://medium.freecodecamp.org/>
+  * dev <https://medium.freecodecamp.org/tagged/web-development>
+  * Learn to code for free <https://www.freecodecamp.com/?ref=mn>
+
+Applause from Conor Dewey <https://medium.com/@conordewey3> and 2,407 others
+Go to the profile of YK Sugi
+<https://medium.freecodecamp.org/@ykdojo?source=post_header_lockup>
+YK Sugi
+<https://medium.freecodecamp.org/@ykdojo?source=post_header_lockup>BlockedUnblockFollowFollowing
+Founder at CS Dojo - @ykdojo on Twitter and Instagram
+Jun 15
+
+------------------------------------------------------------------------
+
+
+  What exactly can you do with Python? Here are Python’s 3 main
+  applications.
+
+If you’re thinking of learning Python — or if you recently started
+learning it — you may be asking yourself:
+
+    *“What exactly can I use Python for?”*
+
+Well that’s a tricky question to answer, because there are so many
+applications for Python.
+
+But over time, I have observed that there are 3 main popular
+applications for Python:
+
+  * Web Development
+  * Data Science — including machine learning, data analysis, and data
+    visualization
+  * Scripting
+
+Let’s talk about each of them in turn.
+
+
+      *Web Development*
+
+Web frameworks that are based on Python like *Django* and *Flask* have
+recently become very popular for web development.
+
+These web frameworks help you create server-side code (backend code) in
+Python. That’s the code that runs on your server, as opposed to on
+users’ devices and browsers (front-end code). If you’re not familiar
+with the difference between backend code and front-end code, please see
+my footnote below.
+
+
+        *But wait, why do I need a web framework?*
+
+That’s because a web framework makes it easier to build common backend
+logic. This includes mapping different URLs to chunks of Python code,
+dealing with databases, and generating HTML files users see on their
+browsers.
+
+
+        *Which Python web framework should I use?*
+
+Django and Flask are two of the most popular Python web frameworks. I’d
+recommend using one of them if you’re just getting started.
+
+
+        *What’s the difference between Django and Flask?*
+
+There’s an excellent article
+<https://www.codementor.io/garethdwyer/flask-vs-django-why-flask-might-be-better-4xs7mdf8v>
+about this topic by Gareth Dwyer, so let me quote it here:
+
+*/<begin quote>/*
+
+Main contrasts:
+
+  * Flask provides simplicity, flexibility and fine-grained control. It
+    is unopinionated (it lets you decide how you want to implement things).
+  * Django provides an all-inclusive experience: you get an admin panel,
+    database interfaces, an ORM [object-relational mapping]
+    <https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it>,
+    and directory structure for your apps and projects out of the box.
+
+You should probably choose:
+
+  * Flask, if you’re focused on the experience and learning
+    opportunities, or if you want more control about which components to
+    use (such as what databases you want to use and how you want to
+    interact with them).
+  * Django, if you’re focused on the final product. Especially if you’re
+    working on a straight-forward application such as a news site, an
+    e-store, or blog, and you want there to always be a single, obvious
+    way of doing things.
+
+*/</end quote>/*
+
+In other words, If you’re a beginner, Flask is probably a better choice
+because it has fewer components to deal with. Also, Flask is a better
+choice if you want more customization.
+
+Also, according to my data engineer friend Jonathan T Ho
+<https://ca.linkedin.com/in/wearables>, Flask is more suited for
+creating these things called REST API’s
+<https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82>
+than Django due to its flexibility.
+
+On the other hand, if you’re looking to build something
+straight-forward, Django will probably let you get there faster.
+
+Okay, let’s go to the next topic!
+
+
+      *Data Science — including machine learning, data analysis, and
+      data visualization*
+
+
+        *First of all, let’s review what machine learning /is/.*
+
+I think the best way to explain what machine learning is would be to
+give you a simple example.
+
+Let’s say you want to develop a program that automatically detects
+what’s in a picture.
+
+So, given this picture below (Picture 1), you want your program to
+recognize that it’s a dog.
+
+Picture 1
+
+Given this other one below (Picture 2), you want your program to
+recognize that it’s a table.
+
+Picture 2
+
+You might say, well, I can just write some code to do that. For example,
+maybe if there are a lot of light brown pixels in the picture, then we
+can say that it’s a dog.
+
+Or maybe, you can figure out how to detect edges in a picture. Then, you
+might say, if there are many straight edges, then it’s a table.
+
+However, this kind of approach gets tricky pretty quickly. What if
+there’s a white dog in the picture with no brown hair? What if the
+picture shows only the round parts of the table?
+
+*This is where machine learning comes in.*
+
+Machine learning typically implements an algorithm that automatically
+detects a pattern in the given input.
+
+You can give, say, 1,000 pictures of a dog and 1,000 pictures of a table
+to a machine learning algorithm. Then, it will learn the difference
+between a dog and a table. When you give it a new picture of either a
+dog or a table, it will be able to recognize which one it is.
+
+I think this is somewhat similar to how a baby learns new things. How
+does a baby learn that one thing looks like a dog and another a table?
+Probably from a bunch of examples.
+
+You probably don’t explicitly tell a baby, “If something is furry and
+has light brown hair, then it’s probably a dog.”
+
+You would probably just say, “That’s a dog. This is also a dog. And this
+one is a table. That one is also a table.”
+
+Machine learning algorithms work much the same way.
+
+You can apply the same idea to:
+
+  * recommendation systems (think YouTube, Amazon, and Netflix)
+  * face recognition
+  * voice recognition
+
+among other applications.
+
+Popular machine learning algorithms you might have heard about include:
+
+  * Neural networks
+  * Deep learning
+  * Support vector machines
+  * Random forest
+
+You can use any of the above algorithms to solve the picture-labeling
+problem I explained earlier.
+
+
+        *Python for machine learning*
+
+There are popular machine learning libraries and frameworks for Python.
+
+Two of the most popular ones are *scikit-learn* and *TensorFlow*.
+
+  * scikit-learn comes with some of the more popular machine learning
+    algorithms built-in. I mentioned some of them above.
+  * TensorFlow is more of a low-level library that allows you to build
+    custom machine learning algorithms.
+
+If you’re just getting started with a machine learning project, I would
+recommend that you first start with scikit-learn. If you start running
+into efficiency issues, then I would start looking into TensorFlow.
+
+
+        *How should I learn machine learning?*
+
+To learn machine learning fundamentals, I would recommend either
+Stanford’s <https://www.coursera.org/learn/machine-learning> or
+Caltech’s <https://work.caltech.edu/telecourse.html> machine learning
+course.
+
+Please note that you need basic knowledge of calculus and linear algebra
+to understand some of the materials in those courses.
+
+Then, I would practice what you’ve learned from one of those courses
+with Kaggle <https://www.kaggle.com/>. It’s a website where people
+compete to build the best machine learning algorithm for a given
+problem. They have nice tutorials for beginners, too.
+
+
+      *What about data analysis and data visualization?*
+
+To help you understand what these might look like, let me give you a
+simple example here.
+
+Let’s say you’re working for a company that sells some products online.
+
+Then, as a data analyst, you might draw a bar graph like this.
+
+Bar Chart 1 — generated with Python
+
+From this graph, we can tell that men bought over 400 units of this
+product and women bought about 350 units of this product this particular
+Sunday.
+
+As a data analyst, you might come up with a few possible explanations
+for this difference.
+
+One obvious possible explanation is that this product is more popular
+with men than with women. Another possible explanation might be that the
+sample size is too small and this difference was caused just by chance.
+And yet another possible explanation might be that men tend to buy this
+product more only on Sunday for some reason.
+
+To understand which of these explanations is correct, you might draw
+another graph like this one.
+
+Line Chart 1 — generated with Python
+
+Instead of showing the data for Sunday only, we’re looking at the data
+for a full week. As you can see, from this graph, we can see that this
+difference is pretty consistent over different days.
+
+From this little analysis, you might conclude that the most convincing
+explanation for this difference is that this product is simply more
+popular with men than with women.
+
+On the other hand, what if you see a graph like this one instead?
+
+Line Chart 2 — also generated with Python
+
+Then, what explains the difference on Sunday?
+
+You might say, perhaps men tend to buy more of this product only on
+Sunday for some reason. Or, perhaps it was just a coincidence that men
+bought more of it on Sunday.
+
+So, this is a simplified example of what data analysis might look like
+in the real world.
+
+The data analysis work I did when I was working at Google and Microsoft
+was very similar to this example — only more complex. I actually used
+Python at Google for this kind of analysis, while I used JavaScript at
+Microsoft.
+
+I used SQL at both of those companies to pull data from our databases.
+Then, I would use either Python and Matplotlib (at Google) or JavaScript
+and D3.js (at Microsoft) to visualize and analyze this data.
+
+
+        *Data analysis / visualization with Python*
+
+One of the most popular libraries for data visualization is Matplotlib
+<https://matplotlib.org/>.
+
+It’s a good library to get started with because:
+
+  * It’s easy to get started with
+  * Some other libraries such as seaborn <https://seaborn.pydata.org/>
+    is based on it. So, learning Matplotlib will help you learn these
+    other libraries later on.
+
+*How should I learn data analysis / visualization with Python?*
+
+You should first learn the fundamentals of data analysis and
+visualization. When I looked for good resources for this online, I
+couldn’t find any. So, I ended up making a YouTube video on this topic:
+
+Intro to Data Analysis / Visualization with Python and Matplotlib
+
+I also ended up making a full course on this topic on Pluralsight
+<https://goo.gl/fZ5oVX>, which you can take for free by signing up to
+their 10-day free trial.
+
+I’d recommend both of them.
+
+After learning the fundamentals of data analysis and visualization,
+learning fundamentals of statistics from websites like Coursera and Khan
+Academy will be helpful, as well.
+
+
+      *Scripting*
+
+
+        *What is scripting?*
+
+Scripting usually refers to writing small programs that are designed to
+automate simple tasks.
+
+So, let me give you an example from my personal experience here.
+
+I used to work at a small startup in Japan where we had an email support
+system. It was a system for us to respond to questions customers sent us
+via email.
+
+When I was working there, I had the task of counting the numbers of
+emails containing certain keywords so we could analyze the emails we
+received.
+
+We could have done it manually, but instead, I wrote a simple program /
+simple script to automate this task.
+
+Actually, we used Ruby for this back then, but Python is also a good
+language for this kind of task. Python is suited for this type of task
+mainly because it has relatively simple syntax and is easy to write.
+It’s also quick to write something small with it and test it.
+
+
+      *What about embedded applications?*
+
+I’m not an expert on embedded applications, but I know that Python works
+with Rasberry Pi. It seems like a popular application among hardware
+hobbyists.
+
+
+      *What about gaming?*
+
+You could use the library called PyGame to develop games, but it’s not
+the most popular gaming engine out there. You could use it to build a
+hobby project, but I personally wouldn’t choose it if you’re serious
+about game development.
+
+Rather, I would recommend getting started with Unity with C#, which is
+one of the most popular gaming engines. It allows you to build a game
+for many platforms, including Mac, Windows, iOS, and Android.
+
+
+      *What about desktop applications?*
+
+You could make one with Python using Tkinter, but it doesn’t seem like
+the most popular choice either.
+
+Instead, it seems like languages like Java, C#, and C++
+<https://www.quora.com/What-is-the-best-programming-language-to-develop-a-desktop-application-It-should-be-cross-platform-free-easy-to-learn-and-have-a-good-community>
+are more popular for this.
+
+Recently, some companies have started using JavaScript to create Desktop
+applications, too.
+
+For example, Slack’s desktop app was built with something called
+Electron
+<https://slack.engineering/building-hybrid-applications-with-electron-dc67686de5fb>.
+It allows you to build desktop applications with JavaScript.
+
+Personally, if I was building a desktop application, I would go with a
+JavaScript option. It allows you to reuse some of the code from a web
+version if you have it.
+
+However, I’m not an expert on desktop applications either, so please let
+me know in a comment if you disagree or agree with me on this.
+
+
+      *Python 3 or Python 2?*
+
+I would recommend Python 3 since it’s more modern and it’s a more
+popular option at this point.
+
+
+      *Footnote: A note about back-end code vs front-end code (just in
+      case you are not familiar with the terms):*
+
+Let’s say you want to make something like Instagram.
+
+Then, you’d need to create front-end code for each type of device you
+want to support.
+
+You might use, for example:
+
+  * Swift for iOS
+  * Java for Android
+  * JavaScript for web browsers
+
+Each set of code will run on each type of device / browser. This will be
+the set of code that determines what the layout of the app will be like,
+what the buttons should look like when you click them, etc.
+
+However, you will still need the ability to store users’ info and
+photos. You will want to store them on your server and not just on your
+users’ devices so each user’s followers can view his/her photos.
+
+This is where the backend code / server-side code comes in. You’ll need
+to write some backend code to do things like:
+
+  * Keep track of who’s following who
+  * Compress photos so they don’t take up so much storage space
+  * Recommend photos and new accounts to each user in the/discovery/ feature
+
+So, this is the difference between backend code and front-end code.
+
+By the way, Python is not the only good choice for writing backend /
+server-side code. There are many other popular choices, including
+Node.js, which is based on JavaScript.
+
+
+      Liked this article? Then, you might also like my YouTube channel.
+
+I have a programming education YouTube channel called CS Dojo
+<https://www.youtube.com/csdojo> with 440,000+ subscribers, where I
+produce more content like this article.
+
+For example, you might like these videos:
+
+What Programming Language Should I Learn First?
+
+How I Learned to Code — and Got a Job at Google!
+
+
+        Anyway, thanks a lot for reading my article!
+
+  * Python <https://medium.freecodecamp.org/tagged/python?source=post>
+  * Data Visualization
+    <https://medium.freecodecamp.org/tagged/data-visualization?source=post>
+  * Data Science
+    <https://medium.freecodecamp.org/tagged/data-science?source=post>
+  * Web Development
+    <https://medium.freecodecamp.org/tagged/web-development?source=post>
+  * Programming
+    <https://medium.freecodecamp.org/tagged/programming?source=post>
+
+Like what you read? Give YK Sugi a round of applause.
+
+From a quick cheer to a standing ovation, clap to show how much you
+enjoyed this story.
+
+13.9K
+40
+#
+BlockedUnblockFollowFollowing
+Go to the profile of YK Sugi
+<https://medium.freecodecamp.org/@ykdojo?source=footer_card>
+
+
+      YK Sugi <https://medium.freecodecamp.org/@ykdojo>
+
+Founder at CS Dojo - @ykdojo <http://twitter.com/ykdojo> on Twitter and
+Instagram
+
+#
+Following
+freeCodeCamp <https://medium.freecodecamp.org/?source=footer_card>
+
+
+      freeCodeCamp <https://medium.freecodecamp.org/?source=footer_card>
+
+Our community publishes stories worth reading on development, design,
+and data science.
+
+<https://medium.freecodecamp.org/the-main-pillars-of-learning-programming-and-why-beginners-should-master-them-e04245c17c56?source=placement_card_footer_grid---------0-41>
+More from freeCodeCamp
+The main pillars of learning programming — and why beginners should
+master them.
+ <https://medium.freecodecamp.org/the-main-pillars-of-learning-programming-and-why-beginners-should-master-them-e04245c17c56?source=placement_card_footer_grid---------0-41>
+Go to the profile of Rainer Hahnekamp
+<https://medium.freecodecamp.org/@rainer.hahnekamp>
+Rainer Hahnekamp
+<https://medium.freecodecamp.org/@rainer.hahnekamp?source=placement_card_footer_grid---------0-41>
+9.91K
+<https://medium.freecodecamp.org/introducing-the-single-element-pattern-dfbd2c295c5d?source=placement_card_footer_grid---------1-41>
+More from freeCodeCamp
+Introducing the Single Element Pattern
+ <https://medium.freecodecamp.org/introducing-the-single-element-pattern-dfbd2c295c5d?source=placement_card_footer_grid---------1-41>
+Go to the profile of Diego Haz <https://medium.freecodecamp.org/@diegohaz>
+Diego Haz
+<https://medium.freecodecamp.org/@diegohaz?source=placement_card_footer_grid---------1-41>
+6.1K
+<https://medium.freecodecamp.org/wanna-be-a-developer-here-is-what-you-need-to-take-into-account-7f59a059f39?source=placement_card_footer_grid---------2-41>
+More from freeCodeCamp
+Wanna be a developer? Here is what you need to take into account.
+ <https://medium.freecodecamp.org/wanna-be-a-developer-here-is-what-you-need-to-take-into-account-7f59a059f39?source=placement_card_footer_grid---------2-41>
+Go to the profile of Vinh Le <https://medium.freecodecamp.org/@vinhle95>
+Vinh Le
+<https://medium.freecodecamp.org/@vinhle95?source=placement_card_footer_grid---------2-41>
+5K
+Responses
+
+Zhou En
+Write a response…
+Zhou En
+Conversation between Ernie Hao <https://medium.com/@erniehao> and YK
+Sugi <https://medium.com/@ykdojo>.
+
+Go to the profile of Ernie Hao <https://medium.com/@erniehao>
+Ernie Hao
+<https://medium.com/@erniehao?source=responses---------0---------------->
+Jun 15
+<https://medium.com/@erniehao/great-article-man-appreciate-your-you-work-and-story-keep-it-up-b5b33c5e4348?source=responses---------0---------------->
+------------------------------------------------------------------------
+
+Great article man! Appreciate your work and story. Keep it up!
+
+<https://medium.com/@erniehao/great-article-man-appreciate-your-you-work-and-story-keep-it-up-b5b33c5e4348?source=responses---------0---------------->
+29
+1 response
+<https://medium.com/@erniehao/great-article-man-appreciate-your-you-work-and-story-keep-it-up-b5b33c5e4348?source=responses---------0----------------#--responses>
+Go to the profile of YK Sugi <https://medium.com/@ykdojo>
+YK Sugi
+<https://medium.com/@ykdojo?source=responses---------0---------------->
+Jun 15
+<https://medium.com/@ykdojo/thanks-a-lot-c22992e1e9ae?source=responses---------0---------------->
+------------------------------------------------------------------------
+
+Thanks a lot!
+
+<https://medium.com/@ykdojo/thanks-a-lot-c22992e1e9ae?source=responses---------0---------------->
+23
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Peter Peterson <https://medium.com/@psqrd>
+Peter Peterson
+<https://medium.com/@psqrd?source=responses---------1-31-------------------->
+Jun 18
+<https://medium.com/@psqrd/dont-use-python2-it-reaches-end-of-life-january-1-2020-https-pythonclock-org-a153fdf5cf3e?source=responses---------1-31-------------------->
+------------------------------------------------------------------------
+
+Don’t use Python2. It reaches end of life January 1, 2020
+https://pythonclock.org/.
+
+<https://medium.com/@psqrd/dont-use-python2-it-reaches-end-of-life-january-1-2020-https-pythonclock-org-a153fdf5cf3e?source=responses---------1-31-------------------->
+25
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Vidyush Bakshi <https://medium.com/@vidushbakshi96>
+Vidyush Bakshi
+<https://medium.com/@vidushbakshi96?source=responses---------2-31-------------------->
+Jun 18
+<https://medium.com/@vidushbakshi96/great-explanation-as-expected-following-ur-yt-channel-already-when-u-had-around-10k-subs-keep-1ea40acb7534?source=responses---------2-31-------------------->
+------------------------------------------------------------------------
+
+Great explanation as expected , following ur yt channel already when u
+had around 10k subs😉 keep up the good work!
+
+<https://medium.com/@vidushbakshi96/great-explanation-as-expected-following-ur-yt-channel-already-when-u-had-around-10k-subs-keep-1ea40acb7534?source=responses---------2-31-------------------->
+71
+Conversation between Dr. Hristo Iliev <https://medium.com/@hiliev> and
+YK Sugi <https://medium.com/@ykdojo>.
+
+Go to the profile of Dr. Hristo Iliev
+<https://medium.com/@hiliev>
+Dr. Hristo Iliev
+<https://medium.com/@hiliev?source=responses---------3---------------->
+Jun 16
+<https://medium.com/@hiliev/you-can-actually-write-versatile-cross-platform-desktop-applications-using-pyqt-which-is-the-f91a84b3e04d?source=responses---------3---------------->
+------------------------------------------------------------------------
+
+You can actually write versatile cross-platform desktop applications
+using PyQt, which is the Python bindings to the Qt library. Take the
+data mining tool Orange or Anaconda’s own Navigator GUI as an example.
+
+<https://medium.com/@hiliev/you-can-actually-write-versatile-cross-platform-desktop-applications-using-pyqt-which-is-the-f91a84b3e04d?source=responses---------3---------------->
+74
+1 response
+<https://medium.com/@hiliev/you-can-actually-write-versatile-cross-platform-desktop-applications-using-pyqt-which-is-the-f91a84b3e04d?source=responses---------3----------------#--responses>
+Go to the profile of YK Sugi <https://medium.com/@ykdojo>
+YK Sugi
+<https://medium.com/@ykdojo?source=responses---------3---------------->
+Jun 16
+<https://medium.com/@ykdojo/hmm-interesting-849ef64c691c?source=responses---------3---------------->
+------------------------------------------------------------------------
+
+Hmm interesting! For people to use Python-based apps on their desktops
+though, will they need to download Python with them?
+
+<https://medium.com/@ykdojo/hmm-interesting-849ef64c691c?source=responses---------3---------------->
+1
+3 responses
+<https://medium.com/@ykdojo/hmm-interesting-849ef64c691c?source=responses---------3----------------#--responses>
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Vaios Bartsokas
+<https://medium.com/@v.mpartsokas>
+Vaios Bartsokas
+<https://medium.com/@v.mpartsokas?source=responses---------4-31-------------------->
+Jun 18
+<https://medium.com/@v.mpartsokas/this-was-the-right-kind-of-article-i-needed-at-the-moment-very-good-info-2a66b1386c5e?source=responses---------4-31-------------------->
+------------------------------------------------------------------------
+
+This was the right kind of article I needed at the moment! Very good info
+
+<https://medium.com/@v.mpartsokas/this-was-the-right-kind-of-article-i-needed-at-the-moment-very-good-info-2a66b1386c5e?source=responses---------4-31-------------------->
+7
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Hareesh Naidu Vemasani
+<https://medium.com/@vemasanihareeshnaidu>
+Hareesh Naidu Vemasani
+<https://medium.com/@vemasanihareeshnaidu?source=responses---------5-31-------------------->
+Jun 20
+<https://medium.com/@vemasanihareeshnaidu/good-article-we-use-scala-and-slick-db-ops-framework-for-back-end-programming-1034522b3605?source=responses---------5-31-------------------->
+------------------------------------------------------------------------
+
+Good article. We use Scala and Slick (db ops framework) for back-end
+programming.
+
+<https://medium.com/@vemasanihareeshnaidu/good-article-we-use-scala-and-slick-db-ops-framework-for-back-end-programming-1034522b3605?source=responses---------5-31-------------------->
+16
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Amrit virdi <https://medium.com/@amrit.virdi>
+Amrit virdi
+<https://medium.com/@amrit.virdi?source=responses---------6-31-------------------->
+Jun 21
+<https://medium.com/@amrit.virdi/i-never-came-across-such-simple-and-clear-explanation-of-what-is-machine-learning-d4606e617e0c?source=responses---------6-31-------------------->
+------------------------------------------------------------------------
+
+I never came across such simple and clear explanation of “What is
+Machine Learning”. Good Work YK Sugi
+
+<https://medium.com/@amrit.virdi/i-never-came-across-such-simple-and-clear-explanation-of-what-is-machine-learning-d4606e617e0c?source=responses---------6-31-------------------->
+2
+Conversation between Mark Lewis <https://medium.com/@drmarkclewis> and
+YK Sugi <https://medium.com/@ykdojo>.
+
+Go to the profile of Mark Lewis <https://medium.com/@drmarkclewis>
+Mark Lewis
+<https://medium.com/@drmarkclewis?source=responses---------7---------------->
+Jun 23
+<https://medium.com/@drmarkclewis/can-we-put-the-proviso-on-the-first-two-that-python-is-best-when-things-are-small-4a4535a10925?source=responses---------7---------------->
+------------------------------------------------------------------------
+
+Can we put the proviso on the first two that Python is best when things
+are small? I would use the third to emphasize that. If your application
+is going to grow to a million or more users, Python frameworks are not
+the way to do. Similarly, if your dataset is going to get really big,
+Python might be a place to start the work, but it isn’t where you…
+
+<https://medium.com/@drmarkclewis/can-we-put-the-proviso-on-the-first-two-that-python-is-best-when-things-are-small-4a4535a10925?source=responses---------7---------------->
+Read more…
+2
+2 responses
+<https://medium.com/@drmarkclewis/can-we-put-the-proviso-on-the-first-two-that-python-is-best-when-things-are-small-4a4535a10925?source=responses---------7----------------#--responses>
+Go to the profile of YK Sugi <https://medium.com/@ykdojo>
+YK Sugi
+<https://medium.com/@ykdojo?source=responses---------7---------------->
+Jun 24
+<https://medium.com/@ykdojo/interesting-16a1fd5ee899?source=responses---------7---------------->
+------------------------------------------------------------------------
+
+Interesting! What would you say is a threshold where Python and Python
+frameworks stop working well, traffic-wise?
+
+<https://medium.com/@ykdojo/interesting-16a1fd5ee899?source=responses---------7---------------->
+5
+1 response
+<https://medium.com/@ykdojo/interesting-16a1fd5ee899?source=responses---------7----------------#--responses>
+Go to the profile of Mark Lewis <https://medium.com/@drmarkclewis>
+Mark Lewis
+<https://medium.com/@drmarkclewis?source=responses---------7---------------->
+Jun 24
+<https://medium.com/@drmarkclewis/that-depends-on-too-many-factors-to-really-put-a-number-on-it-2b7a7b1fcd6c?source=responses---------7---------------->
+------------------------------------------------------------------------
+
+That depends on too many factors to really put a number on it. For
+example, how much work does your app do for each request? How much
+memory are you using with each request? What type of machine or machine
+instance are you running on?
+
+So you would probably have to test the performance of your particular
+app under load to…
+
+<https://medium.com/@drmarkclewis/that-depends-on-too-many-factors-to-really-put-a-number-on-it-2b7a7b1fcd6c?source=responses---------7---------------->
+Read more…
+11
+Conversation between Peter Sichel <https://medium.com/@psichel_25662>
+and YK Sugi <https://medium.com/@ykdojo>.
+
+Go to the profile of Peter Sichel <https://medium.com/@psichel_25662>
+Peter Sichel
+<https://medium.com/@psichel_25662?source=responses---------8---------------->
+Jun 29
+<https://medium.com/@psichel_25662/this-is-a-really-good-writeup-e3fde4b85eec?source=responses---------8---------------->
+------------------------------------------------------------------------
+
+This is a really good writeup. Regarding desktop applications, one of
+the best and most successful technology stacks for desktop and mobile
+applications is Apple’s Cocoa/Objective-C and more recently Swift. It’s
+no accident Apple gained such a huge lead.
+
+C++ is no longer competitive in this space. Enjoy!
+
+<https://medium.com/@psichel_25662/this-is-a-really-good-writeup-e3fde4b85eec?source=responses---------8---------------->
+1
+1 response
+<https://medium.com/@psichel_25662/this-is-a-really-good-writeup-e3fde4b85eec?source=responses---------8----------------#--responses>
+Go to the profile of YK Sugi <https://medium.com/@ykdojo>
+YK Sugi
+<https://medium.com/@ykdojo?source=responses---------8---------------->
+Jun 30
+<https://medium.com/@ykdojo/thank-you-for-the-input-is-is-cross-platform-fa5d47839c18?source=responses---------8---------------->
+------------------------------------------------------------------------
+
+Thank you for the input. Is is cross-platform?
+
+<https://medium.com/@ykdojo/thank-you-for-the-input-is-is-cross-platform-fa5d47839c18?source=responses---------8---------------->
+1 response
+<https://medium.com/@ykdojo/thank-you-for-the-input-is-is-cross-platform-fa5d47839c18?source=responses---------8----------------#--responses>
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Lucas Kohorst <https://medium.com/@lucaskohorst>
+Lucas Kohorst
+<https://medium.com/@lucaskohorst?source=responses---------9-31-------------------->
+Jun 28
+<https://medium.com/@lucaskohorst/python-is-great-for-automating-the-boring-stuff-great-overview-article-keep-it-up-deba4bda8f3f?source=responses---------9-31-------------------->
+------------------------------------------------------------------------
+
+Python is great for automating the boring stuff! Great overview article.
+Keep it up!
+
+<https://medium.com/@lucaskohorst/python-is-great-for-automating-the-boring-stuff-great-overview-article-keep-it-up-deba4bda8f3f?source=responses---------9-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Jolaiya Emmanuel <https://medium.com/@jolaiyaemmanuel>
+Jolaiya Emmanuel
+<https://medium.com/@jolaiyaemmanuel?source=responses---------10-31-------------------->
+Jun 18
+<https://medium.com/@jolaiyaemmanuel/awesome-write-up-man-it-lifted-my-spirit-man-cdc040bf8107?source=responses---------10-31-------------------->
+------------------------------------------------------------------------
+
+awesome write up man,it lifted my spirit man.
+
+<https://medium.com/@jolaiyaemmanuel/awesome-write-up-man-it-lifted-my-spirit-man-cdc040bf8107?source=responses---------10-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Dalon Lobo <https://medium.com/@DalonFrancis>
+Dalon Lobo
+<https://medium.com/@DalonFrancis?source=responses---------11-31-------------------->
+Jun 19
+<https://medium.com/@DalonFrancis/great-article-of-the-use-cases-of-python-bc0bac357a2b?source=responses---------11-31-------------------->
+------------------------------------------------------------------------
+
+Great article of the use cases of python 👍
+
+<https://medium.com/@DalonFrancis/great-article-of-the-use-cases-of-python-bc0bac357a2b?source=responses---------11-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Dea Venditama <https://medium.com/@DeaVenditama>
+Dea Venditama
+<https://medium.com/@DeaVenditama?source=responses---------12-31-------------------->
+Jun 21
+<https://medium.com/@DeaVenditama/thanks-starting-using-python-b92353616126?source=responses---------12-31-------------------->
+------------------------------------------------------------------------
+
+thanks .. starting using python..
+
+<https://medium.com/@DeaVenditama/thanks-starting-using-python-b92353616126?source=responses---------12-31-------------------->
+1
+Conversation between Saral Joshi <https://medium.com/@saraljoshi688> and
+YK Sugi <https://medium.com/@ykdojo>.
+
+Go to the profile of Saral Joshi <https://medium.com/@saraljoshi688>
+Saral Joshi
+<https://medium.com/@saraljoshi688?source=responses---------13---------------->
+Jun 16
+<https://medium.com/@saraljoshi688/love-your-youtube-channel-985bdadbb94a?source=responses---------13---------------->
+------------------------------------------------------------------------
+
+Love your youtube channel. I’m learning python, even though you said
+JavaScript is more futuristic than Python. Will pick up JS later.
+
+<https://medium.com/@saraljoshi688/love-your-youtube-channel-985bdadbb94a?source=responses---------13---------------->
+1
+1 response
+<https://medium.com/@saraljoshi688/love-your-youtube-channel-985bdadbb94a?source=responses---------13----------------#--responses>
+Go to the profile of YK Sugi <https://medium.com/@ykdojo>
+YK Sugi
+<https://medium.com/@ykdojo?source=responses---------13---------------->
+Jun 16
+<https://medium.com/@ykdojo/i-think-both-of-them-are-modern-and-good-to-learn-theyre-just-good-at-different-things-b604212551d1?source=responses---------13---------------->
+------------------------------------------------------------------------
+
+I think both of them are modern and good to learn. They’re just good at
+different things :)
+
+<https://medium.com/@ykdojo/i-think-both-of-them-are-modern-and-good-to-learn-theyre-just-good-at-different-things-b604212551d1?source=responses---------13---------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Alexander Garcia <https://medium.com/@asg5704>
+Alexander Garcia
+<https://medium.com/@asg5704?source=responses---------14-31-------------------->
+Jun 21
+<https://medium.com/@asg5704/thank-you-for-writing-this-b5c68d0d863d?source=responses---------14-31-------------------->
+------------------------------------------------------------------------
+
+Thank you for writing this. I’ve been back and forth about which
+language to learn between Python and Java. I think Python will be a
+better option in the long run.
+
+<https://medium.com/@asg5704/thank-you-for-writing-this-b5c68d0d863d?source=responses---------14-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of subrat verma <https://medium.com/@subratverma3356>
+subrat verma
+<https://medium.com/@subratverma3356?source=responses---------15-31-------------------->
+Jun 18
+<https://medium.com/@subratverma3356/great-article-man-b23e04f40b14?source=responses---------15-31-------------------->
+------------------------------------------------------------------------
+
+Great article man
+
+<https://medium.com/@subratverma3356/great-article-man-b23e04f40b14?source=responses---------15-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of SRIJU NAIR <https://medium.com/@srijunair>
+SRIJU NAIR
+<https://medium.com/@srijunair?source=responses---------16-31-------------------->
+Jun 25
+<https://medium.com/@srijunair/very-good-article-keep-writing-a6977a50962c?source=responses---------16-31-------------------->
+------------------------------------------------------------------------
+
+very good article. Keep writing..
+
+<https://medium.com/@srijunair/very-good-article-keep-writing-a6977a50962c?source=responses---------16-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of BigT_1210 Hoss <https://medium.com/@hoss.anthony88>
+BigT_1210 Hoss
+<https://medium.com/@hoss.anthony88?source=responses---------17-31-------------------->
+Jun 24
+<https://medium.com/@hoss.anthony88/nice-and-right-to-the-point-good-piece-of-writing-i-really-find-all-of-your-articles-and-videos-7c78d08159d8?source=responses---------17-31-------------------->
+------------------------------------------------------------------------
+
+Nice and right to the point; good piece of writing, I really find all of
+your articles and videos very helpful in general. They’ve helped me a
+lot in understanding technology and coding…and life in general, keep up
+the great work!!!:)
+
+<https://medium.com/@hoss.anthony88/nice-and-right-to-the-point-good-piece-of-writing-i-really-find-all-of-your-articles-and-videos-7c78d08159d8?source=responses---------17-31-------------------->
+1
+Applause from YK Sugi <https://medium.com/@ykdojo> (author)
+Go to the profile of Emmanuel Goh <https://medium.com/@eygohlolz>
+Emmanuel Goh
+<https://medium.com/@eygohlolz?source=responses---------18-31-------------------->
+Jun 18
+<https://medium.com/@eygohlolz/good-thoughts-6cd56dc1a90?source=responses---------18-31-------------------->
+------------------------------------------------------------------------
+
+Good thoughts! Another standpoint for the Python 2 vs 3 debate is the
+end-of-life cycle. Python 2 is scheduled for end-of-life in 2020
+(https://legacy.python.org/dev/peps/pep-0373/)
+
+If anyone’s still on Python 2, it’s probably time to start on 3 :)
+
+<https://medium.com/@eygohlolz/good-thoughts-6cd56dc1a90?source=responses---------18-31-------------------->
+1
+Show all responses
+
+  *
+
+    13.9K
+
+  *
+  *
+*
+
+40
+Next story
+
+
+        ✨ Immensely upgrade your development environment with these
+        Visual Studio Code extensions
+
+<https://medium.freecodecamp.org/immensely-upgrade-your-development-environment-with-these-visual-studio-code-extensions-9cd790478530?source=read_next_metabar----------41>
+13.9K
