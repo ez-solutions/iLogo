@@ -1,0 +1,607 @@
+有问题，上知乎。知乎作为中文互联网最大的知识分享平台，以「知识连接一切」
+为愿景，致力于构建一个人人都可以便捷接入的知识分享网络，让人们便捷地与世
+界分享知识、经验和见解，发现更大的世界。
+<https://www.zhihu.com/>
+/
+
+/
+玉树芝兰 <https://zhuanlan.zhihu.com/yushuzhilan>
+首发于玉树芝兰 <https://zhuanlan.zhihu.com/yushuzhilan>
+关注专栏
+
+写文章
+
+如何用Python做中文词云？
+
+
+  如何用Python做中文词云？
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+终身学习者，大学教师。稍微懂一点儿写作、演讲和Python。公众号“玉树芝兰”。
+​
+
+关注他
+
+34 人赞了该文章
+
+打算绘制中文词云图？那你得先学会如何做中文文本分词。跟着我们的教程，一步
+步用Python来动手实践吧。
+
+
+
+    需求
+
+在《如何用Python做词云
+<https://link.zhihu.com/?target=http%3A//www.jianshu.com/p
+/e4b24a734ccc>》一文中，我们介绍了英文文本的词云制作方法。大家玩儿得可还
+高兴？
+
+文中提过，选择英文文本作为示例，是因为处理起来最简单。但是很快就有读者尝
+试用中文文本做词云了。按照前文的方法，你成功了吗？
+
+估计是不成功的。因为这里面缺了一个重要的步骤。
+
+观察你的英文文本。你会发现英文单词之间采用空格作为强制分隔符。
+
+例如：
+
+    Yes Minister is a satirical British sitcom written by Sir Antony Jay
+    and Jonathan Lynn that was first transmitted by BBC Television
+    between 1980 and 1984, split over three seven-episode series.
+
+但是，中文的文本就没有这种空格区隔了。为了做词云，我们首先需要知道中文文
+本里面都有哪些“词”。
+
+你可能觉得这根本不是问题——我一眼就能看出词和词之间的边界！
+
+对，你当然可以。你可以人工处理1句、100句，甚至是10000句话。但是如果给你
+100万句话呢？
+
+这就是人工处理和电脑自动化处理的最显著区别——规模。
+
+别那么急着放弃啊，你可以用电脑来帮忙。
+
+你的问题应该是：如何用电脑把中文文本正确拆分为一个个的单词呢？
+
+这种工作，专业术语叫做分词。
+
+在介绍分词工具及其安装之前，请确认你已经阅读过《如何用Python做词云
+<https://link.zhihu.com/?target=http%3A//www.jianshu.com/p
+/e4b24a734ccc>》一文，并且按照其中的步骤做了相关的准备工作，然后再继续依
+照本文的介绍一步步实践。
+
+
+    分词
+
+中文分词的工具有很多种。有的免费，有的收费。有的在你的笔记本电脑里就能安
+装使用，有的却需要联网做云计算。
+
+今天给大家介绍的，是如何利用Python，在你的笔记本电脑上，免费做中文分词。
+
+我们采用的工具，名称很有特点，叫做“ 结巴分词
+<https://link.zhihu.com/?target=https%3A//github.com/fxsjy/jieba> ”。
+
+为什么叫这么奇怪的名字？
+
+读完本文，你自己应该就能想明白了。
+
+我们先来安装这款分词工具。回到你的“终端”或者“命令提示符”下。
+
+
+
+进入你之前建立好的demo文件夹。
+
+输入以下命令：
+
+|pip install jieba
+|
+
+好了，现在你电脑里的Python已经知道该如何给中文分词了。
+
+
+    数据
+
+在《如何用Python做词云
+<https://link.zhihu.com/?target=http%3A//www.jianshu.com/p
+/e4b24a734ccc>》一文中，我们使用了英剧”Yes, minister“的维基百科介绍文本。
+这次我们又从维基百科上找到了这部英剧对应的中文页面。翻译名称叫做《是，大臣》。
+
+
+
+将网页正文拷贝下来之后，存入文本文件yes-minister-cn.txt，并且将这个文件
+移动到我们的工作目录demo下面。
+
+好了，我们有了用于分析的中文文本数据了。
+
+先别忙着编程序。正式输入代码之前，我们还需要做一件事情，就是下载一份中文
+字体文件。
+
+请到 这个网址
+<https://link.zhihu.com/?target=https%3A//s3-us-west-2.amazonaws.com/notion-static/b869cb0c7f4e4c909a069eaebbd2b7ad/simsun.ttf>
+下载simsun.ttf。
+
+下载后，将这个ttf字体文件也移动到demo目录下，跟文本文件放在一起。
+
+
+    代码
+
+在命令行下，执行：
+
+|jupyter notebook
+|
+
+浏览器会自动开启，并且显示如下界面。
+
+
+
+这里还有上一次词云制作时咱们的劳动成果。此时目录下多了一个文本文件，
+是”Yes, Minister”的中文介绍信息。
+
+打开这个文件，浏览一下内容。
+
+
+
+我们确认中文文本内容已经正确存储。
+
+回到Jupyter笔记本的主页面。点击New按钮，新建一个笔记本(Notebook)。在
+Notebooks里面，请选择Python 2选项。
+
+
+
+系统会提示我们输入Notebook的名称。为了和上次的英文词云制作笔记本区别，就
+叫它wordcloud-cn好了。
+
+
+
+我们在网页里唯一的代码文本框里，输入以下3条语句。输入后，按Shift+Enter键
+执行。
+
+|filename = "yes-minister-cn.txt"
+with open(filename) as f:
+ mytext = f.read()
+|
+
+然后我们尝试显示mytext的内容。输入以下语句之后，还是得按Shift+Enter键执行。
+
+|print(mytext)
+|
+
+显示的结果如下图所示。
+
+
+
+既然中文文本内容读取没有问题，我们就开始分词吧。输入以下两行语句：
+
+|import jieba
+mytext = " ".join(jieba.cut(mytext))
+|
+
+系统会提示一些信息，那是结巴分词第一次启用的时候需要做的准备工作。忽略就
+可以了。
+
+
+
+分词的结果如何？我们来看看。输入：
+
+|print(mytext)
+|
+
+你就可以看到下图所示的分词结果了。
+
+
+
+单词之间已经不再紧紧相连，而是用空格做了区隔，就如同英文单词间的自然划分
+一样。
+
+你是不是迫不及待要用分词后的中文文本作词云了？
+
+可以，输入以下语句：
+
+|from wordcloud import WordCloud
+wordcloud = WordCloud().generate(mytext)
+%pylab inline
+import matplotlib.pyplot as plt
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off"
+|
+
+激动地期待着中文词云的出现？
+
+可惜，你看到的词云是这个样子的。
+
+
+
+你是不是非常愤怒，觉得这次又掉坑里了？
+
+别着急，出现这样的结果，并不是分词或者词云绘制工具有问题，更不是因为咱们
+的教程步骤有误，只是因为字体缺失。词云绘制工具wordcloud默认使用的字体是
+英文的，不包含中文编码，所以才会方框一片。解决的办法，就是把你之前下载的
+simsun.ttf，作为指定输出字体。
+
+输入以下语句：
+
+|from wordcloud import WordCloud
+wordcloud = WordCloud(font_path="simsun.ttf").generate(mytext)
+%pylab inline
+import matplotlib.pyplot as plt
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+|
+
+这次你看到的输出图形就变成了这个样子：
+
+
+
+这样一来，我们就通过中文词云的制作过程，体会到了中文分词的必要性了。
+
+这里给你留个思考题，对比一下此次生成的中文词云，和上次做出的英文词云：
+
+
+
+这两个词云对应的文本都来自维基百科，描述的是同样一部剧，它们有什么异同？
+从这种对比中，你可以发现维基百科中英文介绍内容之间，有哪些有趣的规律？
+
+
+    讨论
+
+掌握了本方法后，你自己做出了一张什么样的中文词云图？除了做词云以外，你还
+知道中文分词的哪些其他应用场景？欢迎留言，分享给大家。我们共同交流讨论。
+
+如果你对我的文章感兴趣，欢迎点赞，并且微信关注和置顶我的公众号“玉树芝兰”
+(nkwangshuyi)。
+
+如果本文可能对你身边的亲友有帮助，也欢迎你把本文通过微博或朋友圈分享给他
+们。让他们一起参与到我们的讨论中来。
+
+编辑于 2017-08-31 <http://zhuanlan.zhihu.com/p/28954970>
+Python
+ <https://www.zhihu.com/topic/19552832>
+数据挖掘
+ <https://www.zhihu.com/topic/19553534>
+数据可视化
+ <https://www.zhihu.com/topic/19593576>
+34
+
+​
+
+22 条评论
+
+​
+
+分享
+​
+
+收藏
+
+​
+
+下一篇如何用Python做情感分析？
+34
+
+​
+
+分享
+
+
+      文章被以下专栏收录
+
+    玉树芝兰
+     <https://zhuanlan.zhihu.com/yushuzhilan>
+
+
+        玉树芝兰
+         <https://zhuanlan.zhihu.com/yushuzhilan>
+
+    关注专栏
+
+
+      推荐阅读
+
+    Python + worldcloud + jieba 十分钟学会用任意中文文本生成词云
+
+
+      Python + worldcloud + jieba 十分钟学会用任意中文文本生成词云
+
+    FontTian
+    <http://zhuanlan.zhihu.com/p/28477688>
+    10行Python代码的词云
+
+
+      10行Python代码的词云
+
+    [已重置]发表于Pytho...
+     <http://zhuanlan.zhihu.com/p/26017855>
+    可能是比Python更方便的词云制作了
+
+
+      可能是比Python更方便的词云制作了
+
+    州的先生
+    <http://zhuanlan.zhihu.com/p/29511883>
+    如何用Python做词云？
+
+
+      如何用Python做词云？
+
+    王树义发表于玉树芝兰
+     <http://zhuanlan.zhihu.com/p/28948653>
+
+
+22 条评论
+
+​
+
+切换为时间排序
+写下你的评论...
+
+评论
+
+Lenskit <https://www.zhihu.com/people/lenskit>
+Lenskit <https://www.zhihu.com/people/lenskit>10 个月前
+直接读取切好的词，如果出不了中文，可import codecs 使用codecs.open方法读
+取文件
+赞
+
+回复
+
+踩
+
+举报
+
+杨鹏远 <https://www.zhihu.com/people/yang-peng-yuan-43>
+杨鹏远 <https://www.zhihu.com/people/yang-peng-yuan-43>10 个月前
+做字云可以吗？
+赞
+
+回复
+
+踩
+
+举报
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>(作者) 回复杨鹏远
+<https://www.zhihu.com/people/yang-peng-yuan-43>10 个月前
+当然可以，每个字间加空格就行。不过实践中很少有这么做的
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+阿尔宙斯 <https://www.zhihu.com/people/a-er-zhou-si-89>
+阿尔宙斯 <https://www.zhihu.com/people/a-er-zhou-si-89>10 个月前
+很不错
+赞
+
+回复
+
+踩
+
+举报
+
+啊呀 <https://www.zhihu.com/people/a-ya-10>
+啊呀 <https://www.zhihu.com/people/a-ya-10>10 个月前
+中文搞了很久都不行👿👿👿
+赞
+
+回复
+
+踩
+
+举报
+
+黑米 <https://www.zhihu.com/people/hei-mi-84>
+黑米 <https://www.zhihu.com/people/hei-mi-84>10 个月前
+中文分词真是个大坑，特别是实体命名识别，除了读库还没见过效果特别好的方法
+1
+
+回复
+
+踩
+
+举报
+
+黄笑 <https://www.zhihu.com/people/huang-xiao-12-38>
+黄笑 <https://www.zhihu.com/people/huang-xiao-12-38>10 个月前
+
+王老师，什么时候做一期加图片的啊。还有就是我想知道代码部分怎么来的，应该
+怎么做。
+
+赞
+
+回复
+
+踩
+
+举报
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>(作者) 回复黄笑
+<https://www.zhihu.com/people/huang-xiao-12-38>10 个月前
+有图片啊。刷新一下
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+如果我是EXCEL中有一堆汉语词，将其转换为TXT后词和词之间会自动带空格，那这
+样是不是就不用分词了？
+
+赞
+
+回复
+
+踩
+
+举报
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>(作者) 回复天书
+<https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+已经分了，就不用再分了
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>回复王树义
+<https://www.zhihu.com/people/wang-shu-yi-11>(作者) 9 个月前
+
+谢谢，那么大神，在哪里可以学到把词云做的更好看呢
+
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>(作者) 回复天书
+<https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+读一下wordcloud包的文档和示例，可以做出更为个性化的外观
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+执行到mytext这一步显示的不是中文全是编码怎么办
+
+赞
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+好了，用一楼的方案解决了。。
+
+赞
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+装好词云包了，但到这步from wordcloud import WordCloud
+wordcloud = WordCloud().generate(mytext)执行完没有反应
+
+赞
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+在不在啊大神快被这个问题折磨死了，就是执行完毫无反应，后来我改用pycharM
+执行也没反应，就显示Process finished with exit code 0
+
+赞
+
+回复
+
+踩
+
+举报
+
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>
+天书 <https://www.zhihu.com/people/wu-ji-tian-shu>9 个月前
+
+前面的坑都过了，也学会用图片做词云了，现在想知道wordcloud里的词除了横和
+竖有斜的排列方式吗，一些在线工具里是有的，但我看了wordcloud里所有参数没
+发现有这个设置
+
+赞
+
+回复
+
+踩
+
+举报
+
+JrsonWang <https://www.zhihu.com/people/jrsonwang>
+JrsonWang <https://www.zhihu.com/people/jrsonwang>8 个月前
+请问如果我想把既有中文又有英文的文本，只需要读取英文部分的该怎么写呢
+赞
+
+回复
+
+踩
+
+举报
+
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>
+王树义 <https://www.zhihu.com/people/wang-shu-yi-11>(作者) 回复JrsonWang
+<https://www.zhihu.com/people/jrsonwang>8 个月前
+可以用正则表达式来筛选过滤。如果想到了更好的办法，咱们再交流。
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+JrsonWang <https://www.zhihu.com/people/jrsonwang>
+JrsonWang <https://www.zhihu.com/people/jrsonwang>回复王树义
+<https://www.zhihu.com/people/wang-shu-yi-11>(作者) 8 个月前
+请问如果要按照编码过滤中文的话改怎么整呀
+赞
+
+查看对话
+
+回复
+
+踩
+
+举报
+
+下一页
+
+想来知乎工作？请发送邮件到 jobs@zhihu.com
+
