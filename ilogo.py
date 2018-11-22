@@ -7,10 +7,10 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 d = path.dirname(__file__)
 data_file = "word_data.txt"
 # image_file = "batman.jpeg"
-image_file = "qq.png"
-font_file = "Inconsolata for Powerline.otf"
+image_file = "batman.jpeg"
+# font_file = "Inconsolata for Powerline.otf"
 # font_file = "Monofur for Powerline.ttf"
-# font_file = "Go Mono Bold for Powerline.ttf"
+font_file = "Go Mono Bold for Powerline.ttf"
 logo_file = "logo.jpg"
 
 print("Reading data file ...")
@@ -22,7 +22,7 @@ alice_coloring = np.array(Image.open(path.join(d, image_file)))
 print("Generating text with WordCloud ... ")
 wc = WordCloud(
     background_color="white",
-    max_words=2000,
+    max_words=500000,
     mask=alice_coloring,
     max_font_size=60,
     random_state=102,
